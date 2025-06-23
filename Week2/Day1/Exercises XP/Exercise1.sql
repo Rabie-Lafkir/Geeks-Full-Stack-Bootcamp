@@ -9,7 +9,7 @@ INSERT INTO items (item_name, price) VALUES
     ('Small Desk', 100),
     ('Large Desk', 300),
     ('Fan',        80)
-ON CONFLICT DO NOTHING;   -- re-run safety
+ON CONFLICT DO NOTHING;  
 
 /* ---------- customers table ---------- */
 CREATE TABLE IF NOT EXISTS customers (
