@@ -8,7 +8,7 @@ def longest_word(sentence):
     return max(words, key=len)
 
 
-# ==== Testing ====
+# Testing
 if __name__ == "__main__":
     # Challenge 1 test
     input_data = "without,hello,bag,world"
