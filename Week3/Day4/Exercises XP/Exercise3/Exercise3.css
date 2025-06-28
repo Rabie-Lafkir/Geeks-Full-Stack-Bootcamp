@@ -1,0 +1,8 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+strong {
+  transition: color 0.3s;
+}
