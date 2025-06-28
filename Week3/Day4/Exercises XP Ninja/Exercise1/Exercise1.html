@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Exercise 1 - Tip Calculator</title>
+  <link rel="stylesheet" href="Exercise1.css" />
+</head>
+<body>
+  <div id="tipCalculator">
+    <h1>Tip Calculator</h1>
+    <label>Bill Amount</label>
+    <input type="number" id="billAmt" placeholder="Amount"><br>
+    <label>Service Quality</label>
+    <select id="serviceQual">
+      <option value="0">--Choose an option--</option>
+      <option value="0.3">30% Excellent</option>
+      <option value="0.2">20% Good</option>
+      <option value="0.15">15% Okay</option>
+      <option value="0.1">10% Bad</option>
+    </select><br>
+    <label>Number of People</label>
+    <input type="number" id="numOfPeople" placeholder="Number"><br>
+    <button id="calculate">Calculate</button>
+  </div>
+
+  <div id="totalTip">
+    <span>Tip amount</span>
+    <span id="tip"></span>
+    <span id="each">each</span>
+  </div>
+  <script src="Exercise1.js"></script>
+</body>
+</html>
