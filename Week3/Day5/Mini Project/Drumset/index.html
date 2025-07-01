@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Modern Drum Kit</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <aside class="sidebar">
+    <h1>Drum&nbsp;Kit</h1>
+    <p class="hint">Click a pad or press its key.</p>
+  </aside>
+
+  <main id="padGrid" class="pad-grid">
+    <button class="pad" data-key="KeyA"><span>A</span></button>
+    <button class="pad" data-key="KeyS"><span>S</span></button>
+    <button class="pad" data-key="KeyD"><span>D</span></button>
+    <button class="pad" data-key="KeyF"><span>F</span></button>
+    <button class="pad" data-key="KeyG"><span>G</span></button>
+    <button class="pad" data-key="KeyH"><span>H</span></button>
+    <button class="pad" data-key="KeyJ"><span>J</span></button>
+    <button class="pad" data-key="KeyK"><span>K</span></button>
+    <button class="pad" data-key="KeyL"><span>L</span></button>
+  </main>
+
+  <!-- Audio files -->
+  <audio data-key="KeyA" src="sounds/boom.wav" preload="auto"></audio>
+  <audio data-key="KeyS" src="sounds/clap.wav" preload="auto"></audio>
+  <audio data-key="KeyD" src="sounds/hihat.wav" preload="auto"></audio>
+  <audio data-key="KeyF" src="sounds/kick.wav" preload="auto"></audio>
+  <audio data-key="KeyG" src="sounds/openhat.wav" preload="auto"></audio>
+  <audio data-key="KeyH" src="sounds/ride.wav" preload="auto"></audio>
+  <audio data-key="KeyJ" src="sounds/snare.wav" preload="auto"></audio>
+  <audio data-key="KeyK" src="sounds/tink.wav" preload="auto"></audio>
+  <audio data-key="KeyL" src="sounds/tom.wav" preload="auto"></audio>
+
+  <script src="app.js"></script>
+</body>
+</html>
