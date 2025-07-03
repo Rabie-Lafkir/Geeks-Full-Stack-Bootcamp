@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JSON Form Output</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    input[type=text] { padding: 4px; margin-right: 4px; }
+    #output { margin-top: 12px; font-family: monospace; }
+  </style>
+</head>
+<body>
+  <form id="userForm">
+    <input type="text" name="name" placeholder="First name" required />
+    <input type="text" name="lastname" placeholder="Last name" required />
+    <button type="submit">Send</button>
+  </form>
+
+  <div id="output"></div>
+
+  <script src="./main.js"></script>
+</body>
+</html>
