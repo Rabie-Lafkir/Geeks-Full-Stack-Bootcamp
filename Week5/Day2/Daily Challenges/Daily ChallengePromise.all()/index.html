@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sunrise Checker ⛅</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Sunrise Checker</h1>
+    <p>Enter two locations to find out when the sun rises there today.</p>
+  </header>
+
+  <main class="container">
+    <form id="sunForm" class="grid">
+      <!-- City 1 -->
+      <fieldset>
+        <legend>City 1 (Paris by default)</legend>
+        <label>Latitude
+          <input name="lat1" type="number" step="any" value="48.864716" required />
+        </label>
+        <label>Longitude
+          <input name="lon1" type="number" step="any" value="2.349014" required />
+        </label>
+      </fieldset>
+
+      <!-- City 2 -->
+      <fieldset>
+        <legend>City 2 (New York by default)</legend>
+        <label>Latitude
+          <input name="lat2" type="number" step="any" value="40.730610" required />
+        </label>
+        <label>Longitude
+          <input name="lon2" type="number" step="any" value="-73.935242" required />
+        </label>
+      </fieldset>
+
+      <button type="submit" class="primary-btn">Check Sunrise</button>
+    </form>
+
+    <section id="results" class="results"></section>
+  </main>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

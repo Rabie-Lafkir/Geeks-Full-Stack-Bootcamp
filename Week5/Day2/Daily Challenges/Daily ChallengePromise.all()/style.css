@@ -1,0 +1,81 @@
+/* ---- BASIC RESET ---- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; }
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #f5f7ff;
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- HEADER ---- */
+header {
+  text-align: center;
+  padding: 2.5rem 1rem 1.2rem;
+}
+header h1 { font-size: 2rem; color: #304ffe; margin-bottom: .4rem; }
+header p  { color: #555; }
+
+/* ---- LAYOUT ---- */
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  width: min(900px, 90%);
+  margin: auto;
+}
+
+/* ---- FORM ---- */
+.grid {
+  width: 60%; 
+  display: grid;
+  gap: 1.25rem 2rem;
+}
+
+fieldset {
+  border: 2px solid #c7ccff;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+}
+
+legend {
+  padding: 0 .3rem;
+  font-weight: 600;
+  color: #304ffe;
+}
+
+label {
+  display: block;
+  font-size: .9rem;
+  margin-top: .6rem;
+}
+
+input {
+  width: 100%;
+  padding: .5rem .6rem;
+  margin-top: .25rem;
+  border: 1px solid #b6b9ff;
+  border-radius: 6px;
+}
+
+.primary-btn {
+  padding: .7rem 1.6rem;
+  border: none;
+  background: #304ffe;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  justify-self: start;
+  transition: background .25s;
+}
+.primary-btn:hover { background: #2439d6; }
+
+/* ---- RESULTS ---- */
+.results {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.error { color: #e53935; }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random GIF Fetcher</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Random GIF Fetcher</h1>
+    <p>Get a random GIF for any topic—then keep or delete it!</p>
+  </header>
+
+  <main class="container">
+    <form id="gifForm" class="gif-form">
+      <input
+        id="categoryInput"
+        type="text"
+        placeholder="Enter a category (e.g. sun)"
+        required
+      />
+      <button type="submit">Get GIF</button>
+    </form>
+
+    <div id="gifContainer" class="gif-grid"></div>
+
+    <button id="deleteAllBtn" class="delete-all">Delete All&nbsp;GIFs</button>
+  </main>
+
+  <script src="main.js" defer></script>
+</body>
+</html>

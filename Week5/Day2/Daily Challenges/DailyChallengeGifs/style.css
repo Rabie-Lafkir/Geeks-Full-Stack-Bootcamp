@@ -1,0 +1,117 @@
+/* ---- RESET BASICS ---- */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(circle at 20% 30%, #f5f7ff, #e2e7ff);
+  color: #222;
+}
+
+/* ---- HEADER ---- */
+header {
+  text-align: center;
+  padding: 3rem 1rem 1.5rem;
+}
+header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.25rem;
+  color: #5146ff;
+}
+header p {
+  color: #555;
+}
+
+/* ---- MAIN LAYOUT ---- */
+.container {
+  width: min(900px, 90%);
+  margin-inline: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---- FORM ---- */
+.gif-form {
+  width: 100%;
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+.gif-form input {
+  flex: 1;
+  padding: 0.65rem 0.75rem;
+  border: 2px solid #b6b9ff;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+.gif-form button {
+  padding: 0 1.25rem;
+  border: none;
+  background: #5146ff;
+  color: #fff;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+.gif-form button:hover {
+  background: #362fee;
+}
+
+/* ---- GIF GRID ---- */
+.gif-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.25rem;
+  width: 100%;
+}
+.gif-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.gif-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.gif-card button {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: rgba(255, 75, 75, 0.88);
+  color: #fff;
+  border: none;
+  padding: 0.35rem 0.6rem;
+  font-size: 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  backdrop-filter: blur(2px);
+  transition: transform 0.15s;
+}
+.gif-card button:hover {
+  transform: scale(1.05);
+}
+
+/* ---- DELETE ALL ---- */
+.delete-all {
+  margin-top: 2rem;
+  padding: 0.6rem 1.5rem;
+  border: none;
+  background: #ff4c4c;
+  color: #fff;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+.delete-all:hover {
+  background: #e84141;
+}
