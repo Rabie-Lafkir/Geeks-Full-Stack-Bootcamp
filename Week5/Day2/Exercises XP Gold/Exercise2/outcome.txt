@@ -1,0 +1,12 @@
+Timeline (ms relative to setTimeout at t=1000):
+
+1000: ==CONCURRENT START with Promise.all==
+1000: starting slow promise
+1000: starting fast promise
+2000: fast promise is done
+3000: slow promise is done
+3000: slow
+3000: fast
+
+Promise.all waits for *all* promises to resolve before its .then runs,
+so logs from .then appear only after the slow (3‑second) promise completes.

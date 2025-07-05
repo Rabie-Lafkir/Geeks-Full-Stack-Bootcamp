@@ -1,0 +1,11 @@
+Timeline (ms offset from setTimeout trigger at 1000 ms):
+
+1000: ==CONCURRENT START with Promise.all==
+1000: starting slow promise
+1000: starting fast promise
+2000: fast promise is done
+3000: slow promise is done
+3000: slow
+3000: fast
+
+Promise.all waits for both promises; logs of messages occur after the slow promise resolves.

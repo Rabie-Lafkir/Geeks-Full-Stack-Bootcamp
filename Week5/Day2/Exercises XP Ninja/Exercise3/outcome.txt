@@ -1,0 +1,12 @@
+setTimeout fires at 5000 ms:
+
+5000: ==PARALLEL with await Promise.all==
+5000: starting slow promise
+5000: starting fast promise
+6000: fast promise is done
+6000: fast
+7000: slow promise is done
+7000: slow
+
+Both async IIFEs start simultaneously and each logs its resolved value;
+await Promise.all waits until both complete (7 s total).

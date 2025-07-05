@@ -1,0 +1,11 @@
+setTimeout fires at 13000 ms:
+
+13000: ==PARALLEL with Promise.then==
+13000: starting slow promise
+13000: starting fast promise
+14000: fast promise is done
+14000: fast
+15000: slow promise is done
+15000: slow
+
+Each promise has its own .then; they resolve independently.

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GIF Search – XP Gold</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>GIF Search</h1>
+    <p>Find up to 25 GIFs for any keyword.</p>
+  </header>
+
+  <main class="container">
+    <form id="gifForm" class="gif-form">
+      <input id="query" type="text" placeholder="e.g. cat" required>
+      <button type="submit">Search</button>
+    </form>
+
+    <button id="clearBtn" class="clear-btn">Delete All</button>
+
+    <div id="grid" class="gif-grid"></div>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
