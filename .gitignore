@@ -16,3 +16,6 @@ ENV/
 *.sublime-project
 *.sub*
 .env
+
+# nodejs
+node_modules

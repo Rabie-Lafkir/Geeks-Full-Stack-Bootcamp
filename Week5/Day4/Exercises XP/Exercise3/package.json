@@ -1,0 +1,12 @@
+{
+  "name": "exercise3",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
