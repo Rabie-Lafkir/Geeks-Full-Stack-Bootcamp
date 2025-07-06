@@ -1,0 +1,101 @@
+/* ===  GLOBAL RESET  ==================================================== */
+*{box-sizing:border-box;margin:0;padding:0}
+
+/* ===  ROOT THEME  ====================================================== */
+:root{
+  --sw-yellow:#FFE81F;            /* classic logo yellow */
+  --sw-yellow-dim:#d6c11d;        /* hover dim */
+  --sw-bg:#070707;                /* deep space */
+  --sw-panel:#151515;             /* card bg */
+  --sw-text:#f5f5f5;              /* neutral off-white */
+  font-family:Orbitron,system-ui,Segoe UI,Roboto,sans-serif;
+  line-height:1.4;
+  color:var(--sw-text);
+  background:var(--sw-bg);
+}
+
+/* ===  STAR-FIELD BACKGROUND  =========================================== */
+body::before,
+body::after{
+  content:"";
+  position:fixed; inset:0;
+  background:
+    radial-gradient(2px 2px at 20% 30%,#fff 50%,transparent 51%) repeat,
+    radial-gradient(1px 1px at 80% 40%,#fff 50%,transparent 51%) repeat,
+    radial-gradient(2px 2px at 60% 80%,#fff 50%,transparent 51%) repeat;
+  background-size:800px 800px,1200px 1200px,1600px 1600px;
+  animation:starfield 90s linear infinite;
+  pointer-events:none;
+  z-index:-1;
+}
+@keyframes starfield{
+  from{transform:translateY(0)}
+  to{transform:translateY(800px)}
+}
+
+/* ===  LAYOUT  ========================================================== */
+h1{
+  margin:2rem 0 1rem;
+  font-weight:700;
+  font-size:clamp(1.8rem,4vw,2.4rem);
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  color:var(--sw-yellow);
+  text-shadow:0 0 8px rgba(255,232,31,.6);
+  text-align:center;
+}
+.container{
+  width:min(900px,92%);
+  margin-inline:auto;
+  text-align:center;
+}
+
+/* ===  BUTTONS  ========================================================= */
+button{
+  cursor:pointer;
+  font-weight:600;
+  border:none;
+  border-radius:8px;
+  background:var(--sw-yellow);
+  color:#000;
+  padding:.65rem 1.4rem;
+  font-size:1rem;
+  letter-spacing:.02em;
+  box-shadow:0 0 6px rgba(255,232,31,.75);
+  transition:background .25s, box-shadow .25s, transform .1s;
+}
+button:hover{background:var(--sw-yellow-dim)}
+button:active{transform:scale(.96)}
+
+/* ===  LOADER  ========================================================== */
+#loader{
+  margin:2rem auto 0;
+  color:var(--sw-yellow);
+}
+.hidden{display:none}
+
+/* ===  INFO CARD  ======================================================= */
+#card{
+  margin:1.8rem auto 0;
+  width:min(340px,90%);
+  padding:1.4rem 1.6rem;
+  background:var(--sw-panel);
+  border:2px solid var(--sw-yellow);
+  border-radius:10px;
+  box-shadow:0 0 8px rgba(255,232,31,.35);
+}
+#card h2{
+  font-size:1.4rem;
+  margin-bottom:.7rem;
+  color:var(--sw-yellow);
+}
+#card ul{list-style:none;text-align:left}
+#card li{margin:.35rem 0}
+
+/* ===  ERROR BANNER  ==================================================== */
+.error{
+  margin-top:1.5rem;
+  color:#ff6b6b;
+  font-weight:500;
+  text-shadow:0 0 4px rgba(255,107,107,.5);
+}

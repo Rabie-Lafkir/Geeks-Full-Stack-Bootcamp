@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/svgs/solid/jedi.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Star Wars</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Star Wars Character</h1>
+
+        <button id="btn">Find someone</button>
+        <div id="loader" class="hidden">
+            <i class="fa-solid fa-spinner fa-spin fa-2x"></i>
+        </div>
+
+        <section id="card" class="hidden">
+            <h2 id="name"></h2>
+            <ul>
+                <li><strong>Height:</strong> <span id="height"></span> cm</li>
+                <li><strong>Gender:</strong> <span id="gender"></span></li>
+                <li><strong>Birth year:</strong> <span id="birth"></span></li>
+                <li><strong>Home world:</strong> <span id="home"></span></li>
+            </ul>
+        </section>
+
+        <p id="error" class="error hidden"></p>
+    </div>
+
+
+    <script src="main.js" defer></script>
+</body>
+
+</html>

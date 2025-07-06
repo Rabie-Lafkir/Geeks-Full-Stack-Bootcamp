@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Pokédex</title>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png"
+            alt="Pokédex logo" />
+        <h1>Pokédex</h1>
+    </header>
+
+    <main>
+        <div class="pokedex-card">
+            <!-- loader -->
+            <div id="loader" class="loader hidden">
+                <i class="fas fa-spinner fa-spin fa-3x" aria-hidden="true"></i>
+            </div>
+
+            <!-- error banner -->
+            <p id="error" class="error hidden"></p>
+
+            <!-- sprite + data -->
+            <div class="sprite-box">
+                <img id="sprite" class="sprite hidden" alt="Pokémon sprite">
+            </div>
+            <h2 id="poke-name" class="hidden"></h2>
+            <p id="poke-id" class="hidden"></p>
+
+            <ul id="stats" class="hidden">
+                <li>Type: <span id="type"></span></li>
+                <li>Height: <span id="height"></span></li>
+                <li>Weight: <span id="weight"></span></li>
+            </ul>
+
+            <!-- controls -->
+            <div class="controls">
+                <button id="prevBtn" title="Previous Pokémon">←</button>
+                <button id="randomBtn" title="Random Pokémon">🎲</button>
+                <button id="nextBtn" title="Next Pokémon">→</button>
+            </div>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>

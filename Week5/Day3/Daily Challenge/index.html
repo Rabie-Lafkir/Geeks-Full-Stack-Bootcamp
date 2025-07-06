@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Currency Converter</title>
+
+  <!-- Font for hero numbers -->
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <!-- Font Awesome for spinner / switch icon -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Currency Converter</h1>
+
+    <!-- Amount + selects -->
+    <div class="row grid-2">
+      <input id="amount" type="number" min="0" step="any" placeholder="Amount">
+      <select id="from"></select>
+    </div>
+
+    <button id="switch" title="Swap">
+      <i class="fas fa-right-left"></i>
+    </button>
+
+    <div class="row grid-2">
+      <input id="result" type="text" readonly placeholder="Converted">
+      <select id="to"></select>
+    </div>
+
+    <!-- action -->
+    <button id="convert" class="primary">Convert</button>
+
+    <!-- feedback -->
+    <div id="loader" class="loader hidden">
+      <i class="fas fa-spinner fa-spin"></i>
+    </div>
+    <p id="message" class="message hidden"></p>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
