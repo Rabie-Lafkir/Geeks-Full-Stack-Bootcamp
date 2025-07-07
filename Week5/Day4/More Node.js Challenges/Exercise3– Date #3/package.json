@@ -1,0 +1,14 @@
+{
+  "name": "exercise3-date-next-holiday",
+  "version": "1.0.0",
+  "description": "Shows today’s date and countdown to the next holiday.",
+  "main": "script.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node script.js",
+    "auto-holidays": "node script.js"
+  },
+  "dependencies": {
+    "date-holidays": "^2.1.0"
+  }
+}

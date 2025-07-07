@@ -1,0 +1,10 @@
+{
+  "name": "exercise1-date-until-newyear",
+  "version": "1.0.0",
+  "description": "Utility that reports the time left until January 1st.",
+  "main": "script.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node script.js"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "exercise2-date-minutes-lived",
+  "version": "1.0.0",
+  "description": "Calculates total minutes lived since a hard-coded birthday.",
+  "main": "script.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node script.js",
+    "prompt": "node script.js" 
+  },
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
