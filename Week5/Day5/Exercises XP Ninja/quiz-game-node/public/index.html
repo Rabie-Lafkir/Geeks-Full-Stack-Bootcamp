@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Node.js Quiz Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">🚀 Quiz Ninja</h1>
+
+    <div id="quiz-box" class="card hidden">
+      <p id="question"></p>
+
+      <ul id="answers" class="answers"></ul>
+
+      <button id="next-btn" class="btn hidden">Next ➜</button>
+      <p id="feedback" class="feedback"></p>
+    </div>
+
+    <div id="start-screen" class="card">
+      <button id="start-btn" class="btn">Start Quiz</button>
+    </div>
+
+    <div id="result-screen" class="card hidden">
+      <h2>Your score: <span id="score"></span>/<span id="total"></span></h2>
+      <button id="restart-btn" class="btn">Play Again</button>
+    </div>
+  </div>
+
+  <script src="script.js" type="module"></script>
+</body>
+</html>

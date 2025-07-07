@@ -1,0 +1,90 @@
+/* quick pastel theme – tweak freely */
+* {
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: #f2f6ff;
+}
+
+.container {
+    width: min(90%, 500px);
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.card {
+    padding: 2rem;
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0 8px 24px #0001;
+}
+
+.hidden {
+    display: none;
+}
+
+.answers {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.answers li {
+    margin-bottom: 0.75rem;
+}
+
+.answers button {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #5b6dff;
+    background: #eef0ff;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.answers button:hover {
+    background: #d8ddff;
+}
+
+.btn {
+    display: block;
+    margin-inline: auto;
+    padding: 0.75rem 2rem;
+    background: #5b6dff;
+    color: #fff;
+    border: none;
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn:hover {
+    filter: brightness(1.1);
+}
+
+.feedback {
+    text-align: center;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+.feedback.correct {
+    color: #26a269;
+}
+
+.feedback.wrong {
+    color: #e12c2c;
+}
