@@ -1,6 +1,5 @@
-// exercise2/date.js
 // Hard-coded birthday: 1990-06-15 08:30 local time
-const birthday = new Date(1990, 5, 15, 8, 30);          // month is 0-based
+const birthday = new Date(1990, 5, 15, 8, 30);
 
 function minutesLived() {
   const diffMs = Date.now() - birthday.getTime();
