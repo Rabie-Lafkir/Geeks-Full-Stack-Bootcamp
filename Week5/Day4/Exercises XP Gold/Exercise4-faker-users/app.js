@@ -1,0 +1,1 @@
+const {users,addUser}=require('./faker-users');[...Array(3)].forEach(()=>addUser());console.log(users);
