@@ -33,7 +33,7 @@ router.post('/greet', (req, res) => {
     <body>
       <div class="greeting-container">
         <h1>Hello, ${name}! ${emoji}</h1>
-        <a href="/">Back</a>
+        <a class="back-link" href="/">Back</a>
       </div>
     </body>
     </html>
