@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Emoji Greeting Form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Enter Your Name and Choose an Emoji</h2>
+    <form action="/greet" method="POST">
+      <input type="text" name="name" placeholder="Your name" required />
+      <select name="emoji" required>
+        <option value="">-- Choose an emoji --</option>
+        <option value="😀">😀</option>
+        <option value="🎉">🎉</option>
+        <option value="🌟">🌟</option>
+        <option value="🎈">🎈</option>
+        <option value="👋">👋</option>
+      </select>
+      <button type="submit">Greet Me</button>
+    </form>
+  </div>
+</body>
+</html>

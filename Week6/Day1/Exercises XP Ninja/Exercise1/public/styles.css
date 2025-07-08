@@ -1,0 +1,162 @@
+/* ─────────  Google Font  ───────── */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* ---------- CSS-Variables ---------- */
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.2);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --text-dark: #1e293b;
+  --text-light: #f8fafc;
+  --accent: #6366f1;
+  --accent-hover: #4f46e5;
+  --radius: 1.5rem;
+  --blur: 18px;
+  --shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  --grad-1: #0f172a;
+  --grad-2: #334155;
+}
+
+/* ---------- Global ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(circle at top left, var(--grad-1), var(--grad-2));
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-light);
+  overflow: hidden;
+}
+
+/* subtle floating blobs */
+body::before,
+body::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.5;
+  animation: blob 18s linear infinite alternate;
+}
+body::before {
+  width: 50vmax;
+  height: 50vmax;
+  top: -20vmax;
+  left: -15vmax;
+  background: #a855f7;
+}
+body::after {
+  width: 35vmax;
+  height: 35vmax;
+  bottom: -15vmax;
+  right: -10vmax;
+  background: #3b82f6;
+}
+
+@keyframes blob {
+  to {
+    transform: translate(25vmax, 15vmax) scale(1.1);
+  }
+}
+
+/* ---------- Card Wrapper ---------- */
+.card {
+  width: min(430px, 92vw);
+  padding: 3rem 2.2rem;
+  border-radius: var(--radius);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(var(--blur));
+  -webkit-backdrop-filter: blur(var(--blur));
+  text-align: center;
+}
+
+/* ---------- Headings ---------- */
+h1,
+h2 {
+  font-weight: 600;
+}
+h1 {
+  font-size: 2.2rem;
+  color: var(--text-light);
+  margin-bottom: 1.2rem;
+}
+h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1.6rem;
+}
+
+/* ---------- Form Elements ---------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+input[type='text'],
+select {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  font-size: 1rem;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-light);
+  backdrop-filter: blur(calc(var(--blur) / 2));
+  -webkit-backdrop-filter: blur(calc(var(--blur) / 2));
+  transition: border 0.2s, background 0.2s;
+}
+input::placeholder { color: #cbd5e1; }
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: rgba(99, 102, 241, 0.08);
+}
+
+button {
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  margin-top: 0.8rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-light);
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: background 0.25s, transform 0.15s;
+}
+button:hover   { background: var(--accent-hover); }
+button:active  { transform: translateY(2px); }
+
+/* ---------- Greeting Screen ---------- */
+.greeting-emoji {
+  font-size: 4rem;
+  display: block;
+  margin-bottom: 0.4rem;
+  animation: bounce-in 0.6s ease-out both;
+}
+@keyframes bounce-in {
+  0%   { transform: scale(0); }
+  60%  { transform: scale(1.25); }
+  100% { transform: scale(1); }
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 2rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.25s;
+}
+.back-link:hover { color: var(--accent-hover); }
