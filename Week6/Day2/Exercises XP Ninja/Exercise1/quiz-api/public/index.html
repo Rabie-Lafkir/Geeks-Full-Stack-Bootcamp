@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quiz Game</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main class="card">
+    <header class="toolbar">
+      <label>
+        Difficulty :
+        <select id="difficulty">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </label>
+      <span id="time">--</span>
+    </header>
+
+    <h2 id="question">Loading…</h2>
+
+    <div id="answer-area">
+      <ul id="options" class="option-list"></ul>
+      <input id="fillInput" placeholder="Type your answer" hidden />
+    </div>
+
+    <button id="nextBtn" hidden>Next</button>
+    <p id="score"></p>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
