@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Register</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; }
+    label { display: block; margin-top: .5rem; }
+    input { padding: .4rem; width: 250px; }
+    button[disabled] { opacity: 0.5; cursor: not-allowed; }
+    .msg { margin-top: 1rem; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Register :</h1>
+  <form id="registerForm">
+    <label>First name <input type="text" id="firstName" required></label>
+    <label>Last name <input type="text" id="lastName" required></label>
+    <label>Email <input type="email" id="email" required></label>
+    <label>Username <input type="text" id="username" required></label>
+    <label>Password <input type="password" id="password" required></label>
+    <button type="submit" id="submitBtn" disabled>Register</button>
+  </form>
+  <p class="msg" id="message"></p>
+<script>
+  const form = document.getElementById('registerForm');
+  const btn = document.getElementById('submitBtn');
+  const msg = document.getElementById('message');
+  form.addEventListener('input', () => {
+    const filled = [...form.querySelectorAll('input')].every(inp => inp.value.trim());
+    btn.disabled = !filled;
+  });
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = {
+      firstName: firstName.value.trim(),
+      lastName: lastName.value.trim(),
+      email: email.value.trim(),
+      username: username.value.trim(),
+      password: password.value
+    };
+    try {
+      const res = await fetch('/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      const resData = await res.json();
+      msg.textContent = resData.message || resData.error || '';
+      if (res.ok) form.reset();
+    } catch(err) {
+      msg.textContent = 'Something went wrong';
+    }
+    btn.disabled = true;
+  });
+</script>
+</body>
+</html>
