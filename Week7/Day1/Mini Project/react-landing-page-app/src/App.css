@@ -1,0 +1,10 @@
+
+.hero {
+  background-color: #e74c3c;
+}
+
+@media (max-width: 767px) {
+  .fa-5x {
+    font-size: 4rem;
+  }
+}
