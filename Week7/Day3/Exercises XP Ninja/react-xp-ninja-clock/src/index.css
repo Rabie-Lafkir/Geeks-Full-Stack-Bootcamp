@@ -1,0 +1,110 @@
+/* ====== RESET ====== */
+html,body{margin:0;padding:0;height:100%;}
+body{
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background:#1a1d29;
+  color:#f8fafc;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  padding:1rem;
+}
+h1{
+  margin:1rem 0 0.5rem;
+  font-size:clamp(1.25rem,2vw,1.6rem);
+  font-weight:600;
+  letter-spacing:.5px;
+  text-align:center;
+}
+
+/* ====== CLOCK CONTAINER ====== */
+.clock-root{
+  position:relative;
+  width:min(92vw,520px);
+  height:min(92vw,520px);
+  margin:2rem auto 2.5rem;
+}
+.clock-ring{
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:100%;height:100%;
+  pointer-events:none;
+}
+
+/* Generic tick style */
+.clock-tick{
+  position:absolute;
+  top:50%;left:50%;
+  transform-origin:center;
+  user-select:none;
+  white-space:nowrap;
+  font-size:11px;
+  color:#7b8794;
+  letter-spacing:.1px;
+  text-transform:uppercase;
+  transition:color .12s ease,text-shadow .12s ease;
+}
+.clock-tick.active{
+  color:#ffda63;
+  text-shadow:0 0 6px rgba(255,218,99,.7);
+  font-weight:600;
+}
+
+/* ring radii (will be scaled down on mobile automatically since container scales) */
+.clock-ring.year     .clock-tick{--r:  25px;}
+.clock-ring.month    .clock-tick{--r:  55px;}
+.clock-ring.weekday  .clock-tick{--r:  85px;}
+.clock-ring.day      .clock-tick{--r: 120px;}
+.clock-ring.hour     .clock-tick{--r: 160px;}
+.clock-ring.minute   .clock-tick{--r: 200px;}
+.clock-ring.second   .clock-tick{--r: 240px;}
+
+
+
+/* Year/Month overlay corners */
+.clock-overlay-year,
+.clock-overlay-month{
+  position:absolute;
+  font-size:14px;
+  opacity:.9;
+  pointer-events:none;
+}
+.clock-overlay-year{top:4px;left:8px;}
+.clock-overlay-month{bottom:4px;right:8px;}
+
+/* center readout summary */
+.clock-center{
+  position:absolute;
+  top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;
+  font-size:18px;
+  font-weight:600;
+  line-height:1.3;
+  color:#e2e8f0;
+}
+
+/* smaller label below center */
+.clock-center-sub{
+  display:block;
+  font-size:13px;
+  font-weight:400;
+  color:#cbd5e1;
+}
+
+/* accessible fallback below */
+.clock-linear{
+  margin-top:0.5rem;
+  font-size:15px;
+  color:#cbd5e1;
+  text-align:center;
+}
+
+/* appear animation */
+@keyframes fadeScale{
+  from{opacity:0;transform:translate(-50%,-50%) scale(.9);}
+  to{opacity:1;transform:translate(-50%,-50%) scale(1);}
+}
+.clock-center{animation:fadeScale .4s ease both;}

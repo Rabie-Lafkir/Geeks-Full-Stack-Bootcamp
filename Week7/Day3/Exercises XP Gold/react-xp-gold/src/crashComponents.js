@@ -1,22 +1,22 @@
 import React from 'react';
 
 /**
- * CrashNow is rendered only after user clicks the button in App.
- * It immediately throws in render to simulate a failure.
+ * CrashNow triggers an error immediately after mount so the ErrorBoundary can catch it.
  */
 export class CrashNow extends React.Component {
+  componentDidMount() {
+    throw new Error('User-triggered crash from <CrashNow/> (componentDidMount)');
+  }
+
   render() {
-    throw new Error('User-triggered crash from <CrashNow/>');
-    // unreachable
-    // return <div>Should never see this</div>;
+    return null; // renders nothing; component will crash on mount
   }
 }
 
 /**
  * CrashInHandler demonstrates error thrown from event handler.
- * We purposely throw inside the onClick. This won't be caught by
- * Error Boundaries automatically (only render/lifecycle errors),
- * so we call the provided onError() callback for demonstration.
+ * Event handler errors are NOT automatically caught by Error Boundaries,
+ * so we forward them up via onError() if provided.
  */
 export function CrashInHandler({ onError }) {
   const handleClick = () => {
