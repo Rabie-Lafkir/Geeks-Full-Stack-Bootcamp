@@ -21,7 +21,7 @@ class FavoriteColor extends React.Component {
     // Change color after mount (simulate async update)
     this.timeoutId = setTimeout(() => {
       this.setState({ favoriteColor: 'yellow' });
-    }, 1000);
+    }, 6000);
   }
 
   getSnapshotBeforeUpdate(prevProps, prevState) {
