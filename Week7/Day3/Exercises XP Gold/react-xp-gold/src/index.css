@@ -1,0 +1,57 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background:#f3f4f6;
+  color:#111827;
+  line-height:1.4;
+}
+h1 {
+  text-align:center;
+  margin-top:2rem;
+}
+button {
+  cursor:pointer;
+  padding:.5rem 1rem;
+  font-size:1rem;
+  margin:.5rem;
+}
+
+/* Modal styles per exercise spec */
+.modal-background {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5); /* transparent dark overlay */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-body {
+  padding: 10px;
+  background: white;
+  border-radius: 5px;
+  max-width: 90%;
+  min-width: 250px;
+  box-shadow:0 4px 20px rgba(0,0,0,.25);
+}
+
+.modal-body h2 {
+  margin-top:0;
+  font-size:1.1rem;
+}
+
+.modal-details {
+  margin-top:.5rem;
+  max-height:200px;
+  overflow:auto;
+  font-size:.8rem;
+  background:#f1f5f9;
+  padding:.5rem;
+  border-radius:4px;
+  white-space:pre-wrap;
+}
